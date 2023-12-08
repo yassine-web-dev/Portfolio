@@ -1,7 +1,14 @@
 import { useEffect } from "react";
 import { Button } from "./ui/button";
 
-export default function Pagination({items, currentPage, pageSize, onPageChange}) {
+interface PaginationProps {
+    items: number,
+    currentPage: number,
+    pageSize: number,
+    onPageChange: any
+}
+
+export default function Pagination({items, currentPage, pageSize, onPageChange} : PaginationProps) {
     const pagesCount = Math.ceil(items / pageSize);
 
     if (pagesCount === 1) return null;

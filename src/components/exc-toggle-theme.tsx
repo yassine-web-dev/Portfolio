@@ -18,8 +18,7 @@ interface ExcModeToggleProps {
 
 const ExcModeToggle: React.FunctionComponent<ExcModeToggleProps> = () => {
   const { theme, setTheme } = useTheme();
-  const capitalizedTheme = theme?.split("")[0].toUpperCase() + theme?.slice(1, theme?.length)
-  
+  const capitalizedTheme = `${theme?.split("")[0].toUpperCase()}${theme?.slice(1, theme?.length)}`
 
   return (
     <DropdownMenu>

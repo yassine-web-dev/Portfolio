@@ -1,6 +1,11 @@
-import { useEffect } from "react" 
+import { useEffect } from "react"
 
-export default function Sorting({ onValue, onChange }) {
+interface SortingProps {
+    onValue: any,
+    onChange: any,
+}
+
+export default function Sorting({ onValue, onChange }: SortingProps) {
 
     useEffect(() => {
         const btn = document.querySelector(".select-box .button")
@@ -12,8 +17,9 @@ export default function Sorting({ onValue, onChange }) {
             menu?.classList.toggle("hidden")
             btn?.classList.toggle("!cursor-default")
         }
-        const handleBlur = (e: React.ChangeEvent<WindowEventHandlers>) => {
-            if (!e.target.classList.contains("eligible")) {
+        const handleBlur = (e: MouseEvent) => {
+            const eventTarget = e.target as HTMLElement;
+            if (!eventTarget.classList.contains("eligible")) {
                 if (!menu?.classList.contains("hidden")) {
                     menu?.classList.add("hidden")
                     if (btn?.classList.contains("!cursor-default")) {
@@ -41,11 +47,11 @@ export default function Sorting({ onValue, onChange }) {
         });
 
         btn?.addEventListener('click', handleClick)
-        window.addEventListener('click', handleBlur)
+        document.body.addEventListener('click', handleBlur)
 
         return () => {
             btn?.removeEventListener('click', handleClick)
-            window.removeEventListener('click', handleBlur)
+            document.body.removeEventListener('click', handleBlur)
         }
         
     }, [])

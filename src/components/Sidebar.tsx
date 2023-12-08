@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Contact2, Github  } from "lucide-react";
+import { Contact2  } from "lucide-react";
 
 interface SidebarProps {
 
