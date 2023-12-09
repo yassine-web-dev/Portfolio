@@ -10,10 +10,7 @@ interface PaginationProps {
 
 export default function Pagination({items, currentPage, pageSize, onPageChange} : PaginationProps) {
     const pagesCount = Math.ceil(items / pageSize);
-
-    if (pagesCount === 1) return null;
-    const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
-
+    
     useEffect(() => {
         const ulLinks = document.querySelectorAll(".pages li .bn");
         const activeBtn = document.querySelector(".pages li .bn:nth-child(1)");
@@ -37,9 +34,12 @@ export default function Pagination({items, currentPage, pageSize, onPageChange} 
         return () => {
             activeBtn?.classList.remove("active")
         }
-
+        
     }, [])
 
+    if (pagesCount === 1) return null;
+    const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
+    
     const handlePrev = () => {
         if (currentPage > 1) {
             onPageChange(currentPage-1)
