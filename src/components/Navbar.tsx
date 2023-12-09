@@ -76,8 +76,9 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
             smnav?.classList.toggle("hidden")
             overlay?.classList.remove("invisible")
         }
-        const handleBlur = (e: React.ChangeEvent<WindowEventHandlers>) => {
-            if (e.target.classList.contains("overlay")) {
+        const handleBlur = (e: MouseEvent) => {
+            const eventTarget = e.target as HTMLElement;
+            if (eventTarget.classList.contains("overlay")) {
                 if (!smnav?.classList.contains("hidden")) {
                     smnav?.classList.add("hidden")
                     if (!overlay?.classList.contains("invisible")) {
@@ -89,12 +90,12 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
 
         close?.addEventListener('click', handleClick)
         nav?.children[0]?.addEventListener('click', handleSecClick)
-        window.addEventListener('click', handleBlur)
+        document.body.addEventListener('click', handleBlur)
         
         return () => {
             close?.removeEventListener('click', handleClick)
             nav?.children[0]?.removeEventListener('click', handleSecClick)
-            window.removeEventListener('click', handleBlur)
+            document.body.removeEventListener('click', handleBlur)
         }
     }, [pathname, searchParams]);
 

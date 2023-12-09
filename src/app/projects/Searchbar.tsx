@@ -183,7 +183,7 @@ export default function Searchbar({ repos } : { repos: Repos[] }) {
         return () => {
             chosen?.classList.remove("hidden")
         }
-    }, [filteredRepos])
+    }, [filteredRepos, repos.length])
 
     return (
         <main>
