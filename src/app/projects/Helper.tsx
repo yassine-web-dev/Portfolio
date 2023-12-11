@@ -109,7 +109,7 @@ async function getRepos(): Promise<Repos[]> {
         }
     }
     );
-    await new Promise(resolver => setTimeout(resolver, 5000))
+    // await new Promise(resolver => setTimeout(resolver, 5000))
 
     return res.json();
 }
