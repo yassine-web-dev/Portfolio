@@ -102,7 +102,7 @@ interface Repos {
 }
 
 async function getRepos(): Promise<Repos[]> {
-    const res = await fetch("https://api.github.com/users/yassine-web-dev/repos", 
+    const res = await fetch("https://api.github.com/users/lkyassine/repos", 
     {
         next: {
             revalidate: 86400,
