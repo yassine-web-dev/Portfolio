@@ -44,7 +44,7 @@ const ModeToggle: React.FunctionComponent<ModeToggleProps> = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="btn-parent" asChild>
-          <Button className="btn h-10 bg-white hover:bg-[#f3f7fa] absolute right-0 -top-[6px] rounded dark:bg-black dark:hover:bg-white focus-visible:ring-0 focus-visible:ring-offset-0" variant={`secondary`} size="icon">
+          <Button className="btn h-10 bg-transparent hover:bg-[#f3f7fa] absolute right-0 -top-[6px] rounded dark:bg-black dark:hover:bg-white focus-visible:ring-0 focus-visible:ring-offset-0" variant={`secondary`} size="icon">
             <Sun className="h-[1.2rem] w-[60px] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute dark:hover:text-black h-[1.2rem] w-[60px] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>

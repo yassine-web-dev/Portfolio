@@ -23,7 +23,7 @@ export default function RootLayout({
     <>
       <html className='scroll-smooth' lang="en" suppressHydrationWarning>
         <head />
-        <body id='bdy' className={`${rubik.className} relative dark:bg-black`}>
+        <body id='bdy' className={`${rubik.className} relative bg-gradient-to-r from-white to-gray-50 dark:bg-none dark:bg-black`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

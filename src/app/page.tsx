@@ -10,7 +10,7 @@ export default function Home() {
       <Sidebar />
       <div className="what-i-do pt-72 xl:pt-64">
         <div>
-          <h1 className='text-6xl mb-2 dark:text-[#DADADA]'>I&#39;m a Front End Web Developer</h1>
+          <h1 className='text-5xl sm:text-6xl mb-2 dark:text-[#DADADA]'>I&#39;m a Front End Web Developer</h1>
           <p className='text-lg dark:text-[#DADADA]'>Let me Code for You</p>
           <Link href={`/projects`}>
             <button type="button" className="mt-8 mr-4 text-black bg-white border-[1px] border-[#dadada] hover:bg-[#dadada] font-medium rounded-lg text-base px-5 py-2.5">Projects</button>

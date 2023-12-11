@@ -190,7 +190,7 @@ export default function Searchbar({ repos } : { repos: Repos[] }) {
             <div className="flex justify-end mt-20 mb-[30px] gap-4">
                 <div className="flex border-b-[1px] w-96 pl-2">
                     <Search className="mr-2 mt-[4px] h-4 w-4 shrink-0 opacity-50" />
-                    <input type="search" placeholder='search' className='w-full pb-2 text-base outline-none dark:bg-black' onChange={handleChange} />
+                    <input type="search" placeholder='search' className='w-full pb-2 text-base outline-none bg-transparent dark:bg-black' onChange={handleChange} />
                 </div>
                 <Sorting
                     onValue={sorting}
