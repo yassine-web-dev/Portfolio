@@ -86,3 +86,7 @@
 .menu .dsc:hover svg {
   @apply dark:fill-white
 }
+
+.projects .heading .heading-container:hover .border-bottom {
+  @apply w-[68px]
+}

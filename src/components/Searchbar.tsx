@@ -14,11 +14,12 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import Paginate from './Paginate';
+import Sorting from './Sorting';
+import Pagination from './Pagination';
 
 
-import Pagination from '../../components/Pagination';
-import Paginate from '../../components/Paginate';
-import Sorting from '../../components/Sorting';
+
 
 interface Repos {
     id: number,

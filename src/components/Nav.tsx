@@ -34,14 +34,8 @@ export default function Nav() {
             }
         });
 
-        // Check if the current URL contains '/' and add the 'on' class
-        if (url.match('/') && homeSpan && projectsSpan && contactSpan) {
-            projectsSpan.classList.remove("on");
-            contactSpan.classList.remove("on");
-            homeSpan.classList.add("on");
-        }
         // Check if the current URL contains '/projects' and add the 'on' class
-        if (url.match('/projects') && homeSpan && projectsSpan && contactSpan) {
+        if (url.match('/#projects') && homeSpan && projectsSpan && contactSpan) {
             homeSpan.classList.remove("on");
             contactSpan.classList.remove("on");
             projectsSpan.classList.add("on");
@@ -105,7 +99,7 @@ export default function Nav() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/projects">
+                        <Link href="/#projects">
                             <span className="pjs text-spgray hover:text-black dark:hover:text-white">Projects</span>
                         </Link>
                     </li>

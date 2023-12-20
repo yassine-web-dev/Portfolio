@@ -3,7 +3,7 @@ import Sidebar2 from "./Sidebar2";
 
 export default function Footer() {
     return (
-        <main className="pt-52 mb-96">
+        <main className="pt-64 mb-96">
             <hr />
             <div className="container">
                 <div className="grid sm:flex sm:justify-between">

@@ -49,20 +49,14 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
             }
         });
 
-        // Check if the current URL contains '/' and add the 'on' class
-        if (url.match('/') && homeSpan && projectsSpan && contactSpan) {
-            projectsSpan.classList.remove("on");
-            contactSpan.classList.remove("on");
-            homeSpan.classList.add("on");
-        }
         // Check if the current URL contains '/projects' and add the 'on' class
-        if (url.match('/projects') && homeSpan && projectsSpan && contactSpan) {
+        if (url.includes('/#projects') && homeSpan && projectsSpan && contactSpan) {
             homeSpan.classList.remove("on");
             contactSpan.classList.remove("on");
             projectsSpan.classList.add("on");
         }
         // Check if the current URL contains '/contact' and add the 'on' class
-        if (url.match('/contact') && homeSpan && projectsSpan && contactSpan) {
+        if (url.includes('/contact') && homeSpan && projectsSpan && contactSpan) {
             homeSpan.classList.remove("on");
             projectsSpan.classList.remove("on");
             contactSpan.classList.add("on");
@@ -112,7 +106,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                     </Link>
                 </li>
                 <li className="pb-4">
-                    <Link href="/projects">
+                    <Link href="/#projects">
                         <span className="pjs text-spgray hover:text-black dark:hover:text-white">Projects</span>
                     </Link>
                 </li>
@@ -144,7 +138,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = () => {
                 <div className="container flex justify-between items-center py-5">
                     <div className="logo">
                         <Link href="/" >
-                            <h1 className="dark:text-white">&lt;Yassine /&gt;</h1>
+                            <h1 className="text-[22px] dark:text-white">&lt;Yassine /&gt;</h1>
                         </Link>
                     </div>
                     <div className="navbar relative">
