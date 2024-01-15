@@ -95,17 +95,17 @@ export default function Nav() {
                 <ul className="links flex gap-3 dark:text-spgray">
                     <li>
                         <Link href="/">
-                            <span className="hm text-spgray hover:text-black dark:hover:text-white on">Home</span>
+                            <span className="hm text-primary hover:text-primary/90">Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/#projects">
-                            <span className="pjs text-spgray hover:text-black dark:hover:text-white">Projects</span>
+                            <span className="pjs text-primary hover:text-primary/90">Projects</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/contact">
-                            <span className="cont text-spgray hover:text-black dark:hover:text-white">Contact</span>
+                            <span className="cont text-primary hover:text-primary/90">Contact</span>
                         </Link>
                     </li>
                     <div className="relative w-10">

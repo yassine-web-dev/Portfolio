@@ -129,7 +129,7 @@ export function CollapsibleDemo({ repos }: {repos: Repos[]}) {
     >
       <div className="flex items-center justify-between space-x-4 px-4">
         <h4 className="">
-          projects i'm working on
+          projects i&#39;m working on
         </h4>
         <CollapsibleTrigger asChild>
           <Button variant="ghost" size="sm" className="hover:bg-gray-300 dark:hover:bg-slate-900 w-9 p-0">
