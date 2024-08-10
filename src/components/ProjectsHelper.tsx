@@ -142,9 +142,26 @@ export function CollapsibleDemo({ repos }: {repos: Repos[]}) {
         repos.length != 0 && repos.sort((repo1, repo2) => repo2.pushed_at.localeCompare(repo1.pushed_at)).slice(0, 1).map(repo => (
             <div key={repo.id} className="flex justify-between rounded-md border border-slate-900 px-4 py-3 font-mono text-sm">
                 {repo.name}
-                <Link href={`https://yassine-web-dev.github.io/${repo.name}`} target="_blank">
+                {
+                  repo.name != "portfolio" && repo.name != "my-portfolio" && repo.name != "youcan-clone" && <Link href={`https://yassine-web-dev.github.io/${repo.name}`} target="_blank">
                     <Badge className="">visit</Badge>
-                </Link>
+                  </Link>
+                }
+                {
+                  repo.name == "portfolio" && <Link href={`https://portfolio-mu-one-71.vercel.app/`} target="_blank">
+                    <Badge className="">visit</Badge>
+                  </Link>
+                }
+                {
+                  repo.name == "my-portfolio" && <Link href={`https://my-portfolio-dn3k.vercel.app/`} target="_blank">
+                    <Badge className="">visit</Badge>
+                  </Link>
+                }
+                {
+                  repo.name == "youcan-clone" && <Link href={`/`} target="_blank">
+                    <Badge className="">visit</Badge>
+                  </Link>
+                }
             </div>
         ))
       }
@@ -155,7 +172,7 @@ export function CollapsibleDemo({ repos }: {repos: Repos[]}) {
                 <div key={repo.id} className="flex justify-between rounded-md border border-slate-900 px-4 py-3 font-mono text-sm">
                     {repo.name}
                     {
-                      repo.name != "portfolio" && repo.name != "my-portfolio" && <Link href={`https://yassine-web-dev.github.io/${repo.name}`} target="_blank">
+                      repo.name != "portfolio" && repo.name != "my-portfolio" && repo.name != "youcan-clone" && <Link href={`https://yassine-web-dev.github.io/${repo.name}`} target="_blank">
                         <Badge className="">visit</Badge>
                       </Link>
                     }
@@ -166,6 +183,11 @@ export function CollapsibleDemo({ repos }: {repos: Repos[]}) {
                     }
                     {
                       repo.name == "my-portfolio" && <Link href={`https://my-portfolio-dn3k.vercel.app/`} target="_blank">
+                        <Badge className="">visit</Badge>
+                      </Link>
+                    }
+                    {
+                      repo.name == "youcan-clone" && <Link href={`/`} target="_blank">
                         <Badge className="">visit</Badge>
                       </Link>
                     }

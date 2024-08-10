@@ -103,7 +103,7 @@ async function getRepos(): Promise<Repos[]> {
     const res = await fetch("https://api.github.com/users/yassine-web-dev/repos", 
     {
         next: {
-            revalidate: 86400,
+            revalidate: 0,
         }
     }
     );
