@@ -139,7 +139,7 @@ export function CollapsibleDemo({ repos }: {repos: Repos[]}) {
         </CollapsibleTrigger>
       </div>
       {
-        repos.length != 0 && repos.sort((repo1, repo2) => repo2.pushed_at.localeCompare(repo1.pushed_at)).slice(0, 1).map(repo => (
+        repos.length != 0 && repos.sort((repo1, repo2) => repo2.pushed_at.localeCompare(repo1.pushed_at)).slice(1, 2).map(repo => (
             <div key={repo.id} className="flex justify-between rounded-md border border-slate-900 px-4 py-3 font-mono text-sm">
                 {repo.name}
                 {
@@ -166,7 +166,7 @@ export function CollapsibleDemo({ repos }: {repos: Repos[]}) {
         ))
       }
       {
-        repos.length != 0 && repos.sort((repo1, repo2) => repo2.pushed_at.localeCompare(repo1.pushed_at)).slice(1, repos.length-1).map(repo => (
+        repos.length != 0 && repos.sort((repo1, repo2) => repo2.pushed_at.localeCompare(repo1.pushed_at)).slice(2, repos.length-1).map(repo => (
             <>
             <CollapsibleContent className="space-y-2">
                 <div key={repo.id} className="flex justify-between rounded-md border border-slate-900 px-4 py-3 font-mono text-sm">
